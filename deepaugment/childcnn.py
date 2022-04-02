@@ -8,6 +8,8 @@ from keras.layers import Conv2D, MaxPooling2D, GlobalAveragePooling2D
 from keras.applications.mobilenet_v2 import MobileNetV2
 from keras.applications.inception_v3 import InceptionV3
 
+from tensorflow.python.keras.optimizer_v2 import rmsprop as rmsprop_v2
+
 import numpy as np
 
 import sys
@@ -259,7 +261,7 @@ class ChildCNN:
         model.add(Dense(self.num_classes))
         model.add(Activation("softmax"))
 
-        optimizer = optimizers.rmsprop(lr=0.001, decay=1e-6)
+        optimizer = rmsprop_v2(lr=0.001, decay=1e-6)
         # optimizer = optimizers.Adadelta(lr=1.0, rho=0.95, epsilon=None, decay=0.0)
         model.compile(
             optimizer=optimizer, loss="categorical_crossentropy", metrics=["accuracy"]

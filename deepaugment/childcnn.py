@@ -261,7 +261,7 @@ class ChildCNN:
         model.add(Dense(self.num_classes))
         model.add(Activation("softmax"))
 
-        optimizer = rmsprop_v2(lr=0.001, decay=1e-6)
+        optimizer = rmsprop_v2.__init__(lr=0.001, decay=1e-6)
         # optimizer = optimizers.Adadelta(lr=1.0, rho=0.95, epsilon=None, decay=0.0)
         model.compile(
             optimizer=optimizer, loss="categorical_crossentropy", metrics=["accuracy"]

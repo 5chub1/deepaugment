@@ -1,12 +1,12 @@
 # (C) 2019 Baris Ozmen <hbaristr@gmail.com>
 
 import tensorflow as tf
-import keras
+# import keras
 
-config = tf.ConfigProto()
-config.gpu_options.allow_growth = True  # tell tensorflow not to use all resources
-session = tf.Session(config=config)
-keras.backend.set_session(session)
+# config = tf.ConfigProto()
+# config.gpu_options.allow_growth = True  # tell tensorflow not to use all resources
+# session = tf.Session(config=config)
+# keras.backend.set_session(session)
 
 import os
 import sys

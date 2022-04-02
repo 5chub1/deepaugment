@@ -5,8 +5,8 @@ from keras.models import Sequential
 from keras.layers import Dense, Dropout, Activation, Flatten
 from keras.layers import Conv2D, MaxPooling2D, GlobalAveragePooling2D
 
-from keras.applications.mobilenetv2 import MobileNetV2
-from keras.applications.inception_v3 import InceptionV3
+from keras.applications import MobileNetV2
+from keras.applications import InceptionV3
 
 import numpy as np
 

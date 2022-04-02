@@ -17,7 +17,7 @@ from keras.layers.pooling import MaxPooling2D, GlobalAveragePooling2D
 from keras.layers import Input, Conv2D
 from keras.layers.merge import add
 from keras.layers.normalization.batch_normalization import BatchNormalization
-from keras.utils.layer_utils import convert_all_kernels_in_model
+# from keras.utils.layer_utils import convert_all_kernels_in_model
 from keras.utils.data_utils import get_file
 from keras.engine.topology import get_source_inputs
 from keras_applications.imagenet_utils import _obtain_input_shape
@@ -155,7 +155,7 @@ def WideResidualNetwork(
                         "your Keras config "
                         "at ~/.keras/keras.json."
                     )
-                    convert_all_kernels_in_model(model)
+                    # convert_all_kernels_in_model(model)
             else:
                 if include_top:
                     weights_path = get_file(
@@ -172,8 +172,8 @@ def WideResidualNetwork(
 
                 model.load_weights(weights_path)
 
-                if K.backend() == "theano":
-                    convert_all_kernels_in_model(model)
+                # if K.backend() == "theano":
+                    # convert_all_kernels_in_model(model)
 
     return model
 

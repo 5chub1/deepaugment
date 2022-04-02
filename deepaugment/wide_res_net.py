@@ -16,7 +16,7 @@ from keras.layers.core import Dense, Dropout, Activation
 from keras.layers.pooling import MaxPooling2D, GlobalAveragePooling2D
 from keras.layers import Input, Conv2D
 from keras.layers.merge import add
-from keras.layers.normalization import BatchNormalization
+from keras.layers.normalization.batch_normalization import BatchNormalization
 from keras.utils.layer_utils import convert_all_kernels_in_model
 from keras.utils.data_utils import get_file
 from keras.engine.topology import get_source_inputs

@@ -19,7 +19,7 @@ from keras.layers.merge import add
 from keras.layers.normalization.batch_normalization import BatchNormalization
 # from keras.utils.layer_utils import convert_all_kernels_in_model
 from keras.utils.data_utils import get_file
-from keras.engine.topology import get_source_inputs
+# from keras.engine.topology import get_source_inputs
 from keras_applications.imagenet_utils import _obtain_input_shape
 import keras.backend as K
 
@@ -117,7 +117,7 @@ def WideResidualNetwork(
     # Ensure that the model takes into account
     # any potential predecessors of `input_tensor`.
     if input_tensor is not None:
-        inputs = get_source_inputs(input_tensor)
+        inputs = img_input
     else:
         inputs = img_input
     # Create model.

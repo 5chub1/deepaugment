@@ -3,7 +3,7 @@
 import sys
 import numpy as np
 import keras
-from keras.utils import np_utils
+from keras.utils.np_utils import to_categorical
 
 
 class DataOp:
@@ -39,8 +39,8 @@ class DataOp:
         data["X_val"] = data["X_val"].astype("float32") / 255
 
         # convert labels to categorical
-        data["y_train"] = keras.utils.np_utils.to_categorical(data["y_train"])
-        data["y_val"] = keras.utils.np_utils.to_categorical(data["y_val"])
+        data["y_train"] = to_categorical(data["y_train"])
+        data["y_val"] = to_categorical(data["y_val"])
         return data
 
     @staticmethod
@@ -104,8 +104,8 @@ class DataOp:
         data["X_val_seed"] = data["X_val_seed"].astype("float32") / 255
 
         # convert labels to categorical
-        data["y_train"] = keras.utils.np_utils.to_categorical(data["y_train"])
-        data["y_val_seed"] = keras.utils.np_utils.to_categorical(data["y_val_seed"])
+        data["y_train"] = to_categorical(data["y_train"])
+        data["y_val_seed"] = to_categorical(data["y_val_seed"])
         return data
 
     @staticmethod
